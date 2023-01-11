@@ -1,10 +1,8 @@
 package com.kshopov.dependencyinjection.controllers;
 
-import com.kshopov.dependencyinjection.service.GreetingServiceImpl;
+import com.kshopov.dependencyinjection.service.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SetterInjectedControllerTest {
 
@@ -13,7 +11,7 @@ class SetterInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterInjectedController();
-        controller.setGreetingsService(new GreetingServiceImpl());
+        controller.setGreetingsService(new ConstructorGreetingService());
     }
 
     @Test
